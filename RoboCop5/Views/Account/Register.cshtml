@@ -1,0 +1,50 @@
+﻿@model RoboCop5.Models.Users
+@{
+    ViewBag.Title = "Regisztráció";
+}
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+    @Html.AntiForgeryToken()
+
+    <div class="main" style="padding:20px">
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <h2 style="color:white;">@ViewBag.Title</h2>
+
+                <h4 style="color:white;">Hozzon létre egy új regisztrációt.</h4>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UEMAIL, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.UEMAIL, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(u => u.UEMAIL, "", new { @class = "text-danger", @style = "color: white !important" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UCODE, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.UCODE, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(u => u.UCODE, "", new { @class = "text-danger", @style = "color: white !important" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button class="btn btn-outline-default my-2 my-sm-0" type="submit">Regisztráció</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

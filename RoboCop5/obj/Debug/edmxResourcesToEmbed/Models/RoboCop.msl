@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RoboCopModelStoreContainer" CdmEntityContainer="RoboCopEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="RoboCopModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arcok">
+      <EntityTypeMapping TypeName="RoboCopModel.Arcok">
+        <MappingFragment StoreEntitySet="Arcok">
+          <ScalarProperty Name="ARID" ColumnName="ARID" />
+          <ScalarProperty Name="ARNAME" ColumnName="ARNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="RoboCopModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="RoboCopModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="RoboCopModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="RoboCopModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Elkovetok">
+      <EntityTypeMapping TypeName="RoboCopModel.Elkovetok">
+        <MappingFragment StoreEntitySet="Elkovetok">
+          <ScalarProperty Name="ELID" ColumnName="ELID" />
+          <ScalarProperty Name="ELSZID" ColumnName="ELSZID" />
+          <ScalarProperty Name="ELLID" ColumnName="ELLID" />
+          <ScalarProperty Name="ELMAG" ColumnName="ELMAG" />
+          <ScalarProperty Name="ELHAJ" ColumnName="ELHAJ" />
+          <ScalarProperty Name="ELSZEM" ColumnName="ELSZEM" />
+          <ScalarProperty Name="ELSULY" ColumnName="ELSULY" />
+          <ScalarProperty Name="ELTERMET" ColumnName="ELTERMET" />
+          <ScalarProperty Name="ELARC" ColumnName="ELARC" />
+          <ScalarProperty Name="ELJAR" ColumnName="ELJAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hajszinek">
+      <EntityTypeMapping TypeName="RoboCopModel.Hajszinek">
+        <MappingFragment StoreEntitySet="Hajszinek">
+          <ScalarProperty Name="HAID" ColumnName="HAID" />
+          <ScalarProperty Name="HANAME" ColumnName="HANAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jarasok">
+      <EntityTypeMapping TypeName="RoboCopModel.Jarasok">
+        <MappingFragment StoreEntitySet="Jarasok">
+          <ScalarProperty Name="JAID" ColumnName="JAID" />
+          <ScalarProperty Name="JANAME" ColumnName="JANAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KozteruletTipusok">
+      <EntityTypeMapping TypeName="RoboCopModel.KozteruletTipusok">
+        <MappingFragment StoreEntitySet="KozteruletTipusok">
+          <ScalarProperty Name="KID" ColumnName="KID" />
+          <ScalarProperty Name="KNAME" ColumnName="KNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lopasok">
+      <EntityTypeMapping TypeName="RoboCopModel.Lopasok">
+        <MappingFragment StoreEntitySet="Lopasok">
+          <ScalarProperty Name="LID" ColumnName="LID" />
+          <ScalarProperty Name="LIKTATO" ColumnName="LIKTATO" />
+          <ScalarProperty Name="LCIM" ColumnName="LCIM" />
+          <ScalarProperty Name="LIDO" ColumnName="LIDO" />
+          <ScalarProperty Name="LIRSZ" ColumnName="LIRSZ" />
+          <ScalarProperty Name="LMID" ColumnName="LMID" />
+          <ScalarProperty Name="LVAROS" ColumnName="LVAROS" />
+          <ScalarProperty Name="LKOZNEV" ColumnName="LKOZNEV" />
+          <ScalarProperty Name="LKOZTIP" ColumnName="LKOZTIP" />
+          <ScalarProperty Name="LHSZ" ColumnName="LHSZ" />
+          <ScalarProperty Name="LESZKOZ" ColumnName="LESZKOZ" />
+          <ScalarProperty Name="LTENYALL" ColumnName="LTENYALL" />
+          <ScalarProperty Name="LUID" ColumnName="LUID" />
+          <ScalarProperty Name="LROGZ" ColumnName="LROGZ" />
+          <ScalarProperty Name="LBESZID" ColumnName="LBESZID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Magassagok">
+      <EntityTypeMapping TypeName="RoboCopModel.Magassagok">
+        <MappingFragment StoreEntitySet="Magassagok">
+          <ScalarProperty Name="MAID" ColumnName="MAID" />
+          <ScalarProperty Name="MAINTERVAL" ColumnName="MAINTERVAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Megyek">
+      <EntityTypeMapping TypeName="RoboCopModel.Megyek">
+        <MappingFragment StoreEntitySet="Megyek">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="MNAME" ColumnName="MNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="RoboCopModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="MTEXT" ColumnName="MTEXT" />
+          <ScalarProperty Name="MPATH" ColumnName="MPATH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuRolesMapping">
+      <EntityTypeMapping TypeName="RoboCopModel.MenuRolesMapping">
+        <MappingFragment StoreEntitySet="MenuRolesMapping">
+          <ScalarProperty Name="MRID" ColumnName="MRID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcedureLog">
+      <EntityTypeMapping TypeName="RoboCopModel.ProcedureLog">
+        <MappingFragment StoreEntitySet="ProcedureLog">
+          <ScalarProperty Name="PLID" ColumnName="PLID" />
+          <ScalarProperty Name="PLTIMESTAMP" ColumnName="PLTIMESTAMP" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PLSUCCESSCODE" ColumnName="PLSUCCESSCODE" />
+          <ScalarProperty Name="PLARGS" ColumnName="PLARGS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Procedures">
+      <EntityTypeMapping TypeName="RoboCopModel.Procedures">
+        <MappingFragment StoreEntitySet="Procedures">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PNAME" ColumnName="PNAME" />
+          <ScalarProperty Name="PISDELETED" ColumnName="PISDELETED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="RoboCopModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="RNAME" ColumnName="RNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schools">
+      <EntityTypeMapping TypeName="RoboCopModel.Schools">
+        <MappingFragment StoreEntitySet="Schools">
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="SNAME" ColumnName="SNAME" />
+          <ScalarProperty Name="SLOGOPATH" ColumnName="SLOGOPATH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sulyok">
+      <EntityTypeMapping TypeName="RoboCopModel.Sulyok">
+        <MappingFragment StoreEntitySet="Sulyok">
+          <ScalarProperty Name="SUID" ColumnName="SUID" />
+          <ScalarProperty Name="SUINTERVAL" ColumnName="SUINTERVAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Szemelyek">
+      <EntityTypeMapping TypeName="RoboCopModel.Szemelyek">
+        <MappingFragment StoreEntitySet="Szemelyek">
+          <ScalarProperty Name="SZID" ColumnName="SZID" />
+          <ScalarProperty Name="SZBEJ" ColumnName="SZBEJ" />
+          <ScalarProperty Name="SZELK" ColumnName="SZELK" />
+          <ScalarProperty Name="SZNEV" ColumnName="SZNEV" />
+          <ScalarProperty Name="SZSZULHELY" ColumnName="SZSZULHELY" />
+          <ScalarProperty Name="SZSZULIDO" ColumnName="SZSZULIDO" />
+          <ScalarProperty Name="SZAN" ColumnName="SZAN" />
+          <ScalarProperty Name="SZIRSZ" ColumnName="SZIRSZ" />
+          <ScalarProperty Name="SZVAROS" ColumnName="SZVAROS" />
+          <ScalarProperty Name="SZKOZNEV" ColumnName="SZKOZNEV" />
+          <ScalarProperty Name="SZKOZTIP" ColumnName="SZKOZTIP" />
+          <ScalarProperty Name="SZHSZ" ColumnName="SZHSZ" />
+          <ScalarProperty Name="SZTELEFON" ColumnName="SZTELEFON" />
+          <ScalarProperty Name="SZSZIG" ColumnName="SZSZIG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Szemszinek">
+      <EntityTypeMapping TypeName="RoboCopModel.Szemszinek">
+        <MappingFragment StoreEntitySet="Szemszinek">
+          <ScalarProperty Name="SZEID" ColumnName="SZEID" />
+          <ScalarProperty Name="SZENAME" ColumnName="SZENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Targyak">
+      <EntityTypeMapping TypeName="RoboCopModel.Targyak">
+        <MappingFragment StoreEntitySet="Targyak">
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="LID" ColumnName="LID" />
+          <ScalarProperty Name="TNAME" ColumnName="TNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Termetek">
+      <EntityTypeMapping TypeName="RoboCopModel.Termetek">
+        <MappingFragment StoreEntitySet="Termetek">
+          <ScalarProperty Name="TEID" ColumnName="TEID" />
+          <ScalarProperty Name="TENAME" ColumnName="TENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="RoboCopModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="UEMAIL" ColumnName="UEMAIL" />
+          <ScalarProperty Name="UCODE" ColumnName="UCODE" />
+          <ScalarProperty Name="UCIPHER" ColumnName="UCIPHER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersRolesMapping">
+      <EntityTypeMapping TypeName="RoboCopModel.UsersRolesMapping">
+        <MappingFragment StoreEntitySet="UsersRolesMapping">
+          <ScalarProperty Name="URID" ColumnName="URID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersSchoolsMapping">
+      <EntityTypeMapping TypeName="RoboCopModel.UsersSchoolsMapping">
+        <MappingFragment StoreEntitySet="UsersSchoolsMapping">
+          <ScalarProperty Name="USID" ColumnName="USID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Varosok">
+      <EntityTypeMapping TypeName="RoboCopModel.Varosok">
+        <MappingFragment StoreEntitySet="Varosok">
+          <ScalarProperty Name="VID" ColumnName="VID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="VNAME" ColumnName="VNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolsAndRoles">
+      <EntityTypeMapping TypeName="RoboCopModel.SchoolsAndRoles">
+        <MappingFragment StoreEntitySet="SchoolsAndRoles">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="RoboCopModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionName="RoboCopModel.Store.UsersBaseData" FunctionImportName="UsersBaseData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoboCopModel.UsersBaseData_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="School" ColumnName="School" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="RoboCopModel.Store.UsersMenus" FunctionImportName="UsersMenus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RoboCopModel.UsersMenus_Result">
+          <ScalarProperty Name="MTEXT" ColumnName="MTEXT" />
+          <ScalarProperty Name="MPATH" ColumnName="MPATH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="LogProcedureCall" FunctionName="RoboCopModel.Store.LogProcedureCall" />
+    <FunctionImportMapping FunctionImportName="RegisterUser" FunctionName="RoboCopModel.Store.RegisterUser" />
+    <FunctionImportMapping FunctionImportName="SetUserCipher" FunctionName="RoboCopModel.Store.SetUserCipher" />
+  </EntityContainerMapping>
+</Mapping>

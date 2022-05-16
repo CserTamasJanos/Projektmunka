@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c690430578364975b95a93754741b5a9" Name="Diagram1">
+        <EntityTypeShape EntityType="RoboCopModel.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Arcok" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.AspNetRoles" Width="1.5" PointX="10.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.AspNetUserClaims" Width="1.5" PointX="15.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.AspNetUserLogins" Width="1.5" PointX="15.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.AspNetUsers" Width="1.5" PointX="13" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Elkovetok" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Hajszinek" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Jarasok" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.KozteruletTipusok" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Lopasok" Width="1.5" PointX="8" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Magassagok" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Megyek" Width="1.5" PointX="1.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Menu" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.MenuRolesMapping" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.ProcedureLog" Width="1.5" PointX="5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Procedures" Width="1.5" PointX="2.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Roles" Width="1.5" PointX="8.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Schools" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Sulyok" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Szemelyek" Width="1.5" PointX="5.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Szemszinek" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Targyak" Width="1.5" PointX="10.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Termetek" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Users" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.UsersRolesMapping" Width="1.5" PointX="11" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.UsersSchoolsMapping" Width="1.5" PointX="11" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.Varosok" Width="1.5" PointX="3.5" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoboCopModel.SchoolsAndRoles" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELARC__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELHAJ__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELJAR__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELMAG__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELSUL__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELSZE__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Elkovetok__ELTER__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Lopasok__LKOZTIP__4A8310C6" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Szemelyek__SZKOZ__45BE5BA9" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Lopasok__LBESZID__4D5F7D71" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Lopasok__LMID__489AC854" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Lopasok__LUID__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Lopasok__LVAROS__498EEC8D" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Targyak__LID__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Varosok__MID__40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__ProcedureLo__PID__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__UsersRolesM__RID__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__UsersSchool__SID__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Szemelyek__SZSZU__43D61337" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__Szemelyek__SZVAR__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__UsersRolesM__UID__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.FK__UsersSchool__UID__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="RoboCopModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

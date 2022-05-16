@@ -1,0 +1,96 @@
+﻿@model RoboCop5.Models.CaseRiport
+
+@using (Html.BeginForm("index", "TestForFilter", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+    @Html.AntiForgeryToken()
+    //HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+
+    <div class="main" style="padding:20px">
+
+        <h2 style="color:white;">@ViewBag.Title.</h2>
+
+        <h4 style="color:white;">Bejelentő adatai</h4>
+
+        <div class="form-group">
+
+            <div class="row p-2">
+                <div class="col-sm-6 p-1">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bejelentő típusa</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Bejelentő</a></li>
+                        <li><a class="dropdown-item" href="#">Elkövető</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Bejelentő Neve">
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <div class="col-sm-3 p-1">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Város</button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+                <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Közterület neve">
+                </div>
+                <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Közterület száma">
+                </div>
+            </div>
+
+            <h4 style="color:white;">Bejelentés tárgya</h4>
+
+            <div class="row p-2">
+                <div class="col-sm-3 p-1">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bűncselekmény fajtája</button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+                <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Év">
+                </div>
+                <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Hónap">
+                </div>
+                <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Nap">
+                </div>
+            </div>
+
+            <div class="row d-grid p-2">
+                <div class="col-sm-4 p-1">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Város</button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+                <div class="col-sm-4 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Közterület neve">
+                </div>
+                <div class="col-sm-4 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Közterület száma">
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <div class="col-sm-4 p-1">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Elkövetés eszköze</button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+                <div class="col-sm-4 p-1">
+                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Bejelentés leírása">
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

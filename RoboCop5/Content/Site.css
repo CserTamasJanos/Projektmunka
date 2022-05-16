@@ -1,0 +1,102 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("background1.jpg");
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    margin: 0 auto;
+    background-color: rgba(0, 74, 101, 0.7);
+    opacity: 90%;
+    width: 80%;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar, .navbar-default {
+    background-color: #004a65;
+    border-block-color: none;
+    border-color: none;
+    outline-color: none;
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+}
+
+.btn-outline-default {
+    border-color: white;
+    color: white;
+    background-color: #004a65;
+    margin-right: 10px;
+}
+
+.btn-outline-default:hover, .btn-outline-default:focus, .btn-outline-default:active, .btn-outline-default.active, .open .dropdown-toggle.btn-outline-default {
+    color: white;
+    background-color: #0da7ff;
+}
+
+label {
+    color: white;
+}
+
+h1, h2, h4, p {
+    color: white !important;
+    text-decoration-color: unset !important;
+}
+
+ul, li {
+    float: left;
+    display: inline;
+    color: white;
+    font-size: medium;
+}
+
+a, a:hover, a:focus, a:active, a.active, a.open a.dropdown-toggle a.btn-outline-default {
+    color: white;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.col-md-2 control-label, form-horizontal, form-control {
+    color: white;
+}
+
+.keycolor {
+    color: white;
+}
+
+.dropdown-menu {
+    width: 20% !important;
+}
+#footer {
+    flex-shrink: 0;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    background-color: #004a65;
+}
+.full {
+    flex: 1 0 auto;
+}

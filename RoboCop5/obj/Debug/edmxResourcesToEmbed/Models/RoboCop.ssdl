@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoboCopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Arcok">
+    <Key>
+      <PropertyRef Name="ARID" />
+    </Key>
+    <Property Name="ARID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ARNAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Elkovetok">
+    <Key>
+      <PropertyRef Name="ELID" />
+    </Key>
+    <Property Name="ELID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ELSZID" Type="int" />
+    <Property Name="ELLID" Type="int" />
+    <Property Name="ELMAG" Type="int" />
+    <Property Name="ELHAJ" Type="int" />
+    <Property Name="ELSZEM" Type="int" />
+    <Property Name="ELSULY" Type="int" />
+    <Property Name="ELTERMET" Type="int" />
+    <Property Name="ELARC" Type="int" />
+    <Property Name="ELJAR" Type="int" />
+  </EntityType>
+  <EntityType Name="Hajszinek">
+    <Key>
+      <PropertyRef Name="HAID" />
+    </Key>
+    <Property Name="HAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HANAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jarasok">
+    <Key>
+      <PropertyRef Name="JAID" />
+    </Key>
+    <Property Name="JAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JANAME" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="KozteruletTipusok">
+    <Key>
+      <PropertyRef Name="KID" />
+    </Key>
+    <Property Name="KID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KNAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lopasok">
+    <Key>
+      <PropertyRef Name="LID" />
+    </Key>
+    <Property Name="LID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LIKTATO" Type="nvarchar" MaxLength="10" StoreGeneratedPattern="Computed" />
+    <Property Name="LCIM" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LIDO" Type="datetime" Nullable="false" />
+    <Property Name="LIRSZ" Type="int" Nullable="false" />
+    <Property Name="LMID" Type="int" Nullable="false" />
+    <Property Name="LVAROS" Type="int" Nullable="false" />
+    <Property Name="LKOZNEV" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LKOZTIP" Type="int" Nullable="false" />
+    <Property Name="LHSZ" Type="int" Nullable="false" />
+    <Property Name="LESZKOZ" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LTENYALL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LUID" Type="int" />
+    <Property Name="LROGZ" Type="datetime" />
+    <Property Name="LBESZID" Type="int" />
+  </EntityType>
+  <EntityType Name="Magassagok">
+    <Key>
+      <PropertyRef Name="MAID" />
+    </Key>
+    <Property Name="MAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAINTERVAL" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Megyek">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MNAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MTEXT" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MPATH" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuRolesMapping">
+    <Key>
+      <PropertyRef Name="MRID" />
+    </Key>
+    <Property Name="MRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="RID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcedureLog">
+    <Key>
+      <PropertyRef Name="PLID" />
+    </Key>
+    <Property Name="PLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PLTIMESTAMP" Type="datetime" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="PLSUCCESSCODE" Type="int" Nullable="false" />
+    <Property Name="PLARGS" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Procedures">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PNAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PISDELETED" Type="bit" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RID" />
+    </Key>
+    <Property Name="RID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RNAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schools">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SNAME" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SLOGOPATH" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sulyok">
+    <Key>
+      <PropertyRef Name="SUID" />
+    </Key>
+    <Property Name="SUID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUINTERVAL" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Szemelyek">
+    <Key>
+      <PropertyRef Name="SZID" />
+    </Key>
+    <Property Name="SZID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SZBEJ" Type="bit" Nullable="false" />
+    <Property Name="SZELK" Type="bit" Nullable="false" />
+    <Property Name="SZNEV" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SZSZULHELY" Type="int" />
+    <Property Name="SZSZULIDO" Type="date" />
+    <Property Name="SZAN" Type="nvarchar(max)" />
+    <Property Name="SZIRSZ" Type="int" />
+    <Property Name="SZVAROS" Type="int" />
+    <Property Name="SZKOZNEV" Type="nvarchar(max)" />
+    <Property Name="SZKOZTIP" Type="int" />
+    <Property Name="SZHSZ" Type="int" />
+    <Property Name="SZTELEFON" Type="int" />
+    <Property Name="SZSZIG" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Szemszinek">
+    <Key>
+      <PropertyRef Name="SZEID" />
+    </Key>
+    <Property Name="SZEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SZENAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Targyak">
+    <Key>
+      <PropertyRef Name="TID" />
+    </Key>
+    <Property Name="TID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LID" Type="int" />
+    <Property Name="TNAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Termetek">
+    <Key>
+      <PropertyRef Name="TEID" />
+    </Key>
+    <Property Name="TEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UEMAIL" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="UCODE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UCIPHER" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="UsersRolesMapping">
+    <Key>
+      <PropertyRef Name="URID" />
+    </Key>
+    <Property Name="URID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="RID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersSchoolsMapping">
+    <Key>
+      <PropertyRef Name="USID" />
+    </Key>
+    <Property Name="USID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="SID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Varosok">
+    <Key>
+      <PropertyRef Name="VID" />
+    </Key>
+    <Property Name="VID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="VNAME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RoboCop.dbo.SchoolsAndRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SchoolsAndRoles">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="SID" Type="int" />
+    <Property Name="RID" Type="int" />
+  </EntityType>
+  <Association Name="FK__Elkovetok__ELARC__17F790F9">
+    <End Role="Arcok" Type="Self.Arcok" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arcok">
+        <PropertyRef Name="ARID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELARC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Elkovetok__ELHAJ__14270015">
+    <End Role="Hajszinek" Type="Self.Hajszinek" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hajszinek">
+        <PropertyRef Name="HAID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELHAJ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Elkovetok__ELJAR__18EBB532">
+    <End Role="Jarasok" Type="Self.Jarasok" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jarasok">
+        <PropertyRef Name="JAID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELJAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Elkovetok__ELMAG__1332DBDC">
+    <End Role="Magassagok" Type="Self.Magassagok" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Magassagok">
+        <PropertyRef Name="MAID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELMAG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Elkovetok__ELSUL__160F4887">
+    <End Role="Sulyok" Type="Self.Sulyok" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sulyok">
+        <PropertyRef Name="SUID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELSULY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Elkovetok__ELSZE__151B244E">
+    <End Role="Szemszinek" Type="Self.Szemszinek" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Szemszinek">
+        <PropertyRef Name="SZEID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELSZEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Elkovetok__ELTER__17036CC0">
+    <End Role="Termetek" Type="Self.Termetek" Multiplicity="0..1" />
+    <End Role="Elkovetok" Type="Self.Elkovetok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Termetek">
+        <PropertyRef Name="TEID" />
+      </Principal>
+      <Dependent Role="Elkovetok">
+        <PropertyRef Name="ELTERMET" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lopasok__LBESZID__4D5F7D71">
+    <End Role="Szemelyek" Type="Self.Szemelyek" Multiplicity="0..1" />
+    <End Role="Lopasok" Type="Self.Lopasok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Szemelyek">
+        <PropertyRef Name="SZID" />
+      </Principal>
+      <Dependent Role="Lopasok">
+        <PropertyRef Name="LBESZID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lopasok__LKOZTIP__4A8310C6">
+    <End Role="KozteruletTipusok" Type="Self.KozteruletTipusok" Multiplicity="1" />
+    <End Role="Lopasok" Type="Self.Lopasok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KozteruletTipusok">
+        <PropertyRef Name="KID" />
+      </Principal>
+      <Dependent Role="Lopasok">
+        <PropertyRef Name="LKOZTIP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lopasok__LMID__489AC854">
+    <End Role="Megyek" Type="Self.Megyek" Multiplicity="1" />
+    <End Role="Lopasok" Type="Self.Lopasok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Megyek">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="Lopasok">
+        <PropertyRef Name="LMID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lopasok__LUID__4B7734FF">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Lopasok" Type="Self.Lopasok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Lopasok">
+        <PropertyRef Name="LUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lopasok__LVAROS__498EEC8D">
+    <End Role="Varosok" Type="Self.Varosok" Multiplicity="1" />
+    <End Role="Lopasok" Type="Self.Lopasok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Varosok">
+        <PropertyRef Name="VID" />
+      </Principal>
+      <Dependent Role="Lopasok">
+        <PropertyRef Name="LVAROS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProcedureLo__PID__46E78A0C">
+    <End Role="Procedures" Type="Self.Procedures" Multiplicity="1" />
+    <End Role="ProcedureLog" Type="Self.ProcedureLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procedures">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="ProcedureLog">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Szemelyek__SZKOZ__45BE5BA9">
+    <End Role="KozteruletTipusok" Type="Self.KozteruletTipusok" Multiplicity="0..1" />
+    <End Role="Szemelyek" Type="Self.Szemelyek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KozteruletTipusok">
+        <PropertyRef Name="KID" />
+      </Principal>
+      <Dependent Role="Szemelyek">
+        <PropertyRef Name="SZKOZTIP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Szemelyek__SZSZU__43D61337">
+    <End Role="Varosok" Type="Self.Varosok" Multiplicity="0..1" />
+    <End Role="Szemelyek" Type="Self.Szemelyek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Varosok">
+        <PropertyRef Name="VID" />
+      </Principal>
+      <Dependent Role="Szemelyek">
+        <PropertyRef Name="SZSZULHELY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Szemelyek__SZVAR__44CA3770">
+    <End Role="Varosok" Type="Self.Varosok" Multiplicity="0..1" />
+    <End Role="Szemelyek" Type="Self.Szemelyek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Varosok">
+        <PropertyRef Name="VID" />
+      </Principal>
+      <Dependent Role="Szemelyek">
+        <PropertyRef Name="SZVAROS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Targyak__LID__503BEA1C">
+    <End Role="Lopasok" Type="Self.Lopasok" Multiplicity="0..1" />
+    <End Role="Targyak" Type="Self.Targyak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lopasok">
+        <PropertyRef Name="LID" />
+      </Principal>
+      <Dependent Role="Targyak">
+        <PropertyRef Name="LID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersRolesM__RID__47DBAE45">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="UsersRolesMapping" Type="Self.UsersRolesMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RID" />
+      </Principal>
+      <Dependent Role="UsersRolesMapping">
+        <PropertyRef Name="RID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersRolesM__UID__48CFD27E">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UsersRolesMapping" Type="Self.UsersRolesMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="UsersRolesMapping">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersSchool__SID__49C3F6B7">
+    <End Role="Schools" Type="Self.Schools" Multiplicity="1" />
+    <End Role="UsersSchoolsMapping" Type="Self.UsersSchoolsMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="SID" />
+      </Principal>
+      <Dependent Role="UsersSchoolsMapping">
+        <PropertyRef Name="SID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersSchool__UID__4AB81AF0">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UsersSchoolsMapping" Type="Self.UsersSchoolsMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="UsersSchoolsMapping">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Varosok__MID__40F9A68C">
+    <End Role="Megyek" Type="Self.Megyek" Multiplicity="1" />
+    <End Role="Varosok" Type="Self.Varosok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Megyek">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="Varosok">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Authorized" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="chiper" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetUserIdByCipher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="chiper" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetUserRoleIdByCipher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="chiper" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetUserSchoolIdByCipher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="chiper" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="LoggedIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="code" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="LogProcedureCall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="successCode" Type="int" Mode="In" />
+    <Parameter Name="arguments" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RegisterUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="code" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="successCode" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SetUserCipher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="cipher" Type="nvarchar" Mode="In" />
+    <Parameter Name="successCode" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="UsersBaseData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chiper" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Role" Type="nvarchar" MaxLength="20" />
+          <Property Name="School" Type="nvarchar" MaxLength="200" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="UsersMenus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chiper" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MTEXT" Type="nvarchar" MaxLength="20" />
+          <Property Name="MPATH" Type="nvarchar" MaxLength="20" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="RoboCopModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arcok" EntityType="Self.Arcok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Elkovetok" EntityType="Self.Elkovetok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hajszinek" EntityType="Self.Hajszinek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jarasok" EntityType="Self.Jarasok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KozteruletTipusok" EntityType="Self.KozteruletTipusok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lopasok" EntityType="Self.Lopasok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Magassagok" EntityType="Self.Magassagok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Megyek" EntityType="Self.Megyek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuRolesMapping" EntityType="Self.MenuRolesMapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcedureLog" EntityType="Self.ProcedureLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Procedures" EntityType="Self.Procedures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schools" EntityType="Self.Schools" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sulyok" EntityType="Self.Sulyok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Szemelyek" EntityType="Self.Szemelyek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Szemszinek" EntityType="Self.Szemszinek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Targyak" EntityType="Self.Targyak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Termetek" EntityType="Self.Termetek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersRolesMapping" EntityType="Self.UsersRolesMapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersSchoolsMapping" EntityType="Self.UsersSchoolsMapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Varosok" EntityType="Self.Varosok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolsAndRoles" EntityType="Self.SchoolsAndRoles" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SchoolsAndRoles].[UID] AS [UID], 
+    [SchoolsAndRoles].[SID] AS [SID], 
+    [SchoolsAndRoles].[RID] AS [RID]
+    FROM [dbo].[SchoolsAndRoles] AS [SchoolsAndRoles]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Elkovetok__ELARC__17F790F9" Association="Self.FK__Elkovetok__ELARC__17F790F9">
+      <End Role="Arcok" EntitySet="Arcok" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Elkovetok__ELHAJ__14270015" Association="Self.FK__Elkovetok__ELHAJ__14270015">
+      <End Role="Hajszinek" EntitySet="Hajszinek" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Elkovetok__ELJAR__18EBB532" Association="Self.FK__Elkovetok__ELJAR__18EBB532">
+      <End Role="Jarasok" EntitySet="Jarasok" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Elkovetok__ELMAG__1332DBDC" Association="Self.FK__Elkovetok__ELMAG__1332DBDC">
+      <End Role="Magassagok" EntitySet="Magassagok" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Elkovetok__ELSUL__160F4887" Association="Self.FK__Elkovetok__ELSUL__160F4887">
+      <End Role="Sulyok" EntitySet="Sulyok" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Elkovetok__ELSZE__151B244E" Association="Self.FK__Elkovetok__ELSZE__151B244E">
+      <End Role="Szemszinek" EntitySet="Szemszinek" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Elkovetok__ELTER__17036CC0" Association="Self.FK__Elkovetok__ELTER__17036CC0">
+      <End Role="Termetek" EntitySet="Termetek" />
+      <End Role="Elkovetok" EntitySet="Elkovetok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lopasok__LBESZID__4D5F7D71" Association="Self.FK__Lopasok__LBESZID__4D5F7D71">
+      <End Role="Szemelyek" EntitySet="Szemelyek" />
+      <End Role="Lopasok" EntitySet="Lopasok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lopasok__LKOZTIP__4A8310C6" Association="Self.FK__Lopasok__LKOZTIP__4A8310C6">
+      <End Role="KozteruletTipusok" EntitySet="KozteruletTipusok" />
+      <End Role="Lopasok" EntitySet="Lopasok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lopasok__LMID__489AC854" Association="Self.FK__Lopasok__LMID__489AC854">
+      <End Role="Megyek" EntitySet="Megyek" />
+      <End Role="Lopasok" EntitySet="Lopasok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lopasok__LUID__4B7734FF" Association="Self.FK__Lopasok__LUID__4B7734FF">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Lopasok" EntitySet="Lopasok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lopasok__LVAROS__498EEC8D" Association="Self.FK__Lopasok__LVAROS__498EEC8D">
+      <End Role="Varosok" EntitySet="Varosok" />
+      <End Role="Lopasok" EntitySet="Lopasok" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProcedureLo__PID__46E78A0C" Association="Self.FK__ProcedureLo__PID__46E78A0C">
+      <End Role="Procedures" EntitySet="Procedures" />
+      <End Role="ProcedureLog" EntitySet="ProcedureLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Szemelyek__SZKOZ__45BE5BA9" Association="Self.FK__Szemelyek__SZKOZ__45BE5BA9">
+      <End Role="KozteruletTipusok" EntitySet="KozteruletTipusok" />
+      <End Role="Szemelyek" EntitySet="Szemelyek" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Szemelyek__SZSZU__43D61337" Association="Self.FK__Szemelyek__SZSZU__43D61337">
+      <End Role="Varosok" EntitySet="Varosok" />
+      <End Role="Szemelyek" EntitySet="Szemelyek" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Szemelyek__SZVAR__44CA3770" Association="Self.FK__Szemelyek__SZVAR__44CA3770">
+      <End Role="Varosok" EntitySet="Varosok" />
+      <End Role="Szemelyek" EntitySet="Szemelyek" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Targyak__LID__503BEA1C" Association="Self.FK__Targyak__LID__503BEA1C">
+      <End Role="Lopasok" EntitySet="Lopasok" />
+      <End Role="Targyak" EntitySet="Targyak" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersRolesM__RID__47DBAE45" Association="Self.FK__UsersRolesM__RID__47DBAE45">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UsersRolesMapping" EntitySet="UsersRolesMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersRolesM__UID__48CFD27E" Association="Self.FK__UsersRolesM__UID__48CFD27E">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UsersRolesMapping" EntitySet="UsersRolesMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersSchool__SID__49C3F6B7" Association="Self.FK__UsersSchool__SID__49C3F6B7">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="UsersSchoolsMapping" EntitySet="UsersSchoolsMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersSchool__UID__4AB81AF0" Association="Self.FK__UsersSchool__UID__4AB81AF0">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UsersSchoolsMapping" EntitySet="UsersSchoolsMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Varosok__MID__40F9A68C" Association="Self.FK__Varosok__MID__40F9A68C">
+      <End Role="Megyek" EntitySet="Megyek" />
+      <End Role="Varosok" EntitySet="Varosok" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
